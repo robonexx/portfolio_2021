@@ -31,7 +31,8 @@ const ModalBg = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-    width: 80%;
+    width: 40%;
+    height: 100%;
     box-shadow: 0px 6px 10px rgba(0,0,0,0.8);
     background-color: rgba(0,0,0,0.9);
     color: #fafafa;
@@ -39,17 +40,22 @@ const ModalWrapper = styled.div`
     margin-left: 10vw;
     z-index: 10;
     border-radius: 20px;
+    font-size: 1.2rem;
+    @media (max-width: 900px) {
+        width: 80%;
+
+    }
 `;
 
 const ModalContent = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center;
+align-items: left;
 line-height: 1.4;
-background-image: url(../../img/code.jpg);
-padding: 2px 12px;
+padding: 20px 50px;
 color: #fafafa;
+
 
 p {
     margin-bottom: 0.8rem;
@@ -88,13 +94,13 @@ const Modal = ({ showModal, setShowModal }) => {
                     <animated.div style={animation} >
                         <ModalWrapper>
                             <ModalContent>
-                                <h1>Developer</h1>
+                                <h1>Hi, there</h1>
                                 <p>
-                                    When I as a kid I got a C-64 and later an Amiga 500, I used them mostly for playing games but this might have also been my first try on doing some coding while trying to do sprites.
-                                    I´ve always been intereted in technology and all things tech but never got in to it. It think my dancing took over. But now some years later I decided to go all in and learn how to code.
-                                    So right now...
+                                   My name is Robert Wägar and I'm a Front end Developer living in Stockholm, Sweden. <br/> <br/>
+                                   Im currently studying and learning new skills. I started spring 2020 with JAVA to learn basics of programming. I also took a course in basic webdevelopment. 
+                                   Fall 2020 I managed to get in to KYH's Front end developer education and this is where I'm at until june 2022. <br />
+                                   This web page is done in REACT and I also have skills in HTML, CSS, JAVASCRIPT, AJAX... tbc. 
                                 </p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum provident perferendis veritatis reiciendis ut, quod reprehenderit! Consequuntur nulla voluptates nihil, quis laborum unde ut minima. Numquam voluptatum quos iste necessitatibus!</p>
                             </ModalContent>
                                 <CloseModalBtn aria-label='Close Modal' onClick={() => setShowModal (prev => !prev)} />
                         </ModalWrapper>

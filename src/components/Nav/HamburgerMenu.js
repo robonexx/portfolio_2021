@@ -49,7 +49,7 @@ const Ul = styled.ul`
 }
 
 a:nth-of-type(4n+1) {
-  background: #213970;
+  background: #0a6c74;
   border: 1px solid #0A6C74;
   transition-delay: 0.3s;  
 }
