@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,500;0,800;1,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  font-family: 'Gayathri', sans-serif;
+  background-color: rgba(0,0,0,0.5);
+}
+/* 
+.about {
+  position: absolute;
+  top: 12vh;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  height: 80vh;
+  margin: 40px auto;
+  padding: 6%;
+  background: url('./components/img/robertwagar.jpg');
+  background-position: center;
+  border-radius: 10px;
+  color: #fafafa;
+  box-shadow: 6px 6px 10px rgb(0, 0, 0, 0.5);
+  z-index: 5;
+  
+} */
+
+/* background image loading */
