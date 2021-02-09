@@ -22,7 +22,7 @@ z-index: 20;
 const ModalBg = styled.div`
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ const ModalBg = styled.div`
 
 const ModalWrapper = styled.div`
     width: 40%;
-    height: 100%;
+    height: 80%;
     box-shadow: 0px 6px 10px rgba(0,0,0,0.8);
     background-color: rgba(0,0,0,0.9);
     color: #fafafa;
@@ -41,9 +41,11 @@ const ModalWrapper = styled.div`
     z-index: 10;
     border-radius: 20px;
     font-size: 1.2rem;
-    @media (max-width: 900px) {
-        width: 80%;
 
+    @media (max-width: 768px) {
+        height: 80vh;
+        width: 80vw;
+        font-size: 1rem;
     }
 `;
 
@@ -95,10 +97,11 @@ const Modal = ({ showModal, setShowModal }) => {
                         <ModalWrapper>
                             <ModalContent>
                                 <h1>Hi, there</h1>
+                                <br/>
                                 <p>
                                    My name is Robert Wägar and I'm a Front end Developer living in Stockholm, Sweden. <br/> <br/>
                                    Im currently studying and learning new skills. I started spring 2020 with JAVA to learn basics of programming. I also took a course in basic webdevelopment. 
-                                   Fall 2020 I managed to get in to KYH's Front end developer education and this is where I'm at until june 2022. <br />
+                                   Fall 2020 I managed to get in to KYH's Front end developer education and this is where I'm at until june 2022. <br /><br/>
                                    This web page is done in REACT and I also have skills in HTML, CSS, JAVASCRIPT, AJAX... tbc. 
                                 </p>
                             </ModalContent>
