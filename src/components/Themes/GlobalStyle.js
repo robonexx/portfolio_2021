@@ -11,4 +11,4 @@ export const GlobalStyles = createGlobalStyle`
         background-position: center;
         background-attachment: fixed;
   }
-  `
+  `;
