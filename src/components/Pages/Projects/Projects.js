@@ -2,16 +2,14 @@ import styled from 'styled-components'
 import colors from '../../video/paint.mp4';
 import projectImg from '../../../img/beyou.jpg';
 import { useSpring, animated } from 'react-spring'
-/* import { render } from 'react-dom';
-import Typed from 'react-typed'; */
+import './Projects.css'
+
 
 const BGImg = styled.img.attrs({ src: `${projectImg}`})`
-width: 100%;
-height: 92vh;
-position: absolute;
+postition: absolute;
 top: 8vh;
-left: 0;
-bottom: 0;
+width: 100%;
+height: 100%;
 opacity: 0.5;
 
     background-repeat: no-repeat;
@@ -27,7 +25,7 @@ const Container = styled.div`
 position: absolute;
 top: 20vh;
 left: 50%;
-margin-top: 4vh;
+margin-top: 2vh;
 transform: translate(-50%);
 width: 80%;
 height: 74vh;
@@ -80,12 +78,13 @@ const Projects = () => {
     
     
     return ( 
-        <animated.div style={fade}>
+        <animated.div style={fade} className="projects">
 
             <video autoPlay loop muted
             style={{
                 position: "absolute",
-                bottom: "0",
+                top: "0",
+                left: "0",
                 width: "100%",
                 height: "100vh",
                 objectFit: "cover",
@@ -100,10 +99,12 @@ const Projects = () => {
                 <animated.div  style={fadeIn}>
                 <Title>Projects</Title>
                 </animated.div>
-                <Section>
+                <animated.div>
+                <Section style={fade}>
                 <p>Coming soon...</p>
                 <p>Until then you can check my github or codepen you'll find the link on my contact page</p>
                 </Section>
+                </animated.div>
                 
             </Container>
             </animated.div>

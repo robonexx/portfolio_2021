@@ -18,8 +18,12 @@ function Weather() {
         fetch(API_URL + API_KEY + END)
             .then(response => response.json())
             .then(data => setData({ data })
-            );
-
+            )
+            .catch((e) => {
+                console.log(e)
+              
+            })
+            
     }, []);
 
     
