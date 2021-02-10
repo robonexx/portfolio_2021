@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import './About.css'
 import Modal from '../../Modal/Modal';
 
- const Container = styled.div` 
+ const Content = styled.div` 
  position: absolute;
  top: 8vh;
  left: 50%;
@@ -134,7 +134,7 @@ return (
                 <animated.div style={fadeIn}>
                     <Title>Robert "Rob-One" Wägar</Title>
                 </animated.div>
-        <Container>
+        <Content>
                 <DevSection>
                     <animated.div style={fadeInA}>
                         <Button onClick={openModal} >
@@ -160,7 +160,7 @@ return (
                     </TextP> */}
                 </DancerSection>
                 
-            </Container>
+            </Content>
             </animated.div>
         
         

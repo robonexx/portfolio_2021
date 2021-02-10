@@ -31,13 +31,12 @@ const ModalBg = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-    width: 40%;
+    width: 50%;
     height: 80%;
     box-shadow: 0px 6px 10px rgba(0,0,0,0.8);
     background-color: rgba(0,0,0,0.9);
     color: #fafafa;
     position: relative;
-    margin-left: 10vw;
     z-index: 10;
     border-radius: 20px;
     font-size: 1.2rem;
@@ -54,7 +53,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: left;
-line-height: 1.4;
+line-height: 1.2;
 padding: 20px 50px;
 color: #fafafa;
 
