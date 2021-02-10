@@ -1,3 +1,15 @@
+# React training by creating a portfolio
+
+I learned a lot during the process and will definitly keep on changing and learning more, then eventually create a real portfolio site. 
+
+I've learned how to use Basics of react, react-router, react-icons, styled-components, react-spring, getting in an API call amongst other things. 
+
+I will keep on using this library "Framework" but also try a few others.
+
+Im always looking to learn more and will keep on building up on my skills. 
+
+=========================================================================================================================
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
