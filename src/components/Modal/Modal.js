@@ -22,7 +22,7 @@ z-index: 20;
 const ModalBg = styled.div`
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
@@ -42,8 +42,8 @@ const ModalWrapper = styled.div`
     font-size: 1.2rem;
 
     @media (max-width: 768px) {
-        height: 80vh;
-        width: 80vw;
+        height: 80%;
+        width: 80%;
         font-size: 1rem;
     }
 `;
