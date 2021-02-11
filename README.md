@@ -1,6 +1,8 @@
 # React training by creating a portfolio
 
-I learned a lot during the process and will definitly keep on changing and learning more, then eventually create a real portfolio site. 
+I did a lot of testing on this one, and at the same time trying to have fun. No the best choices. Not responsive more then to a desktop and samsung 10 wich i used to check. 
+
+Will do a more serious and clean portfolio in a near future. 
 
 I've learned how to use Basics of react, react-router, react-icons, styled-components, react-spring, getting in an API call amongst other things. 
 
