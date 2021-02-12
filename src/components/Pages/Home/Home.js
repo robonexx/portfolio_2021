@@ -125,10 +125,9 @@ const Container = styled.div`
     position: absolute;
     top: 10em;
     left: 10em;
-    font-family: 'Special Elite', cursive;
     font-size: 1.4rem;
     color: ${({ theme }) => theme.text};
-    text-shadow: 2px 2px 2px ${({ theme }) => theme.textShadow};
+    text-shadow: 2px 2px 3px solid black;
     width: 30%;
 
     @media (max-width: 768px) {

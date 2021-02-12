@@ -29,7 +29,7 @@ const Ul = styled.ul`
   }
 
   a {
-  width: 4.4rem;
+  width: 4.8rem;
   margin-bottom: 20px;
   text-decoration: none;
   color: white;

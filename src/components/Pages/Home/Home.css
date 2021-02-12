@@ -55,7 +55,7 @@
   background-image: url(../../../img/ruperto.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right bottom;
+  background-position: bottom 10vh right 2vw;
   background-attachment: fixed;
 }
 
@@ -69,10 +69,12 @@
   left: 0;
   z-index: 10;
   font-size: 0.8rem;
+  font-weight: lighter;
   letter-spacing: 2px;
   background: linear-gradient(120deg, black, transparent);
   padding: 2px 4px;
-  font-family: 'Special Elite', cursive;
+  color: #fafafa;
+
   text-shadow: 1px 1px rgba(0,0,0,0.3);
 }
  
@@ -89,8 +91,8 @@
   position: absolute;
   top: 2em;
   left: 4em;
-  color: #fafafa;
-  filter: drop-shadow(3px 3px 4px black);
+  color: aqua;
+  filter: drop-shadow(2px 2px rgb(193, 148, 236));
   font-size: 1.6rem;
   font-family: 'Special Elite', cursive;
 }

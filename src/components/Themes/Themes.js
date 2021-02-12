@@ -5,7 +5,7 @@ import dark from '../../img/disconnected.jpg';
 
 export const lightTheme = {
     body: `url(${light})`,
-    text: '#F0F4F8',
+    text: '#e1e2e3',
     textShadow: 'rgba(0,0,0)',
     background: '#1e2e3e',
     logo: '#f0f4f8',
@@ -16,7 +16,7 @@ export const lightTheme = {
 
 export const darkTheme = {
     body: `url(${dark})`,
-    text: '#6dd47e',
+    text: '#fafafa',
     textShadow: 'rgba(0,0,0)',
     background: '#1e2e3e',
     logo: '#adefd1ff',
