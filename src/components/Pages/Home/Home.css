@@ -97,6 +97,13 @@
   font-family: 'Special Elite', cursive;
 }
 
+@media screen and (max-width: 1200px) {
+  .typewriter {
+    position: absolute;
+    top: 1em;
+  }
+}
+
 @media screen and (max-width: 768px) {
 
   .weather {
@@ -111,5 +118,12 @@
   }
   .clock {
     font-size: 0.4rem;
+  }
+
+  .container3 .img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 2vh right 2vw;
+    background-attachment: fixed;
   }
 }
