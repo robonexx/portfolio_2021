@@ -126,9 +126,14 @@ const Container = styled.div`
     top: 10em;
     left: 10em;
     font-size: 1rem;
-    color: ${({ theme }) => theme.text};
-    text-shadow: 2px 2px 3px solid black;
+    
     width: 30%;
+
+    &>p {
+        color: ${({ theme }) => theme.text};
+        background: linear-gradient(120deg, white, transparent);
+        text-shadow: 2px 2px 3px solid black;
+    }
 
     @media (max-width: 768px) {
         top: 7em;
@@ -166,9 +171,9 @@ const Home = () => {
         </div>
 
         {/* Lägger in en klocka på på sidan som visas hela på homepage under naven. */}
-        <div className="clock">
+        {/* <div className="clock">
         <Clock />
-        </div>
+        </div> */}
         {/* Vädret visas i toppen på homepage */}
         <div className="weather">
         <Weather />
@@ -198,12 +203,13 @@ const Home = () => {
         </div>
 
         <HomeAbout>
+            <p>
                     My name is Robert Wägar I´m a junior developer. <br/><br/>
                     At the moment I'm studying at <b>KYH front end developer education</b> in STHLM. The education ends june 2021. <br/><br/> 
                     I have developed skills in <b>HTML, CSS, SASS, JS, AJAX</b> currently learning <b>REACT</b> & some of its libraries. <br /><br />
                     The fact that this community is very helpful is a nice addition & I'm looking forward to be a part of it. <br/><br/>
                     Wanna know more, read my about page...
-
+            </p>
         </HomeAbout>
 
          <div className="img"></div>

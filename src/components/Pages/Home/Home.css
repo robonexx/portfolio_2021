@@ -38,13 +38,13 @@
   height: 90vh;
   width: 100%;
 
-  background: radial-gradient(
+  /* background: radial-gradient(
     ellipse at top left,
     rgb(216, 182, 240) 20,
     #5e4963,
     rgb(27, 19, 7),
     #461141
-  );
+  ); */
   display: grid;
   grid-template-columns: 13fr 20fr 10fr 10fr;
   grid-template-rows: 20fr 34fr 15fr;
@@ -62,7 +62,7 @@
 .no-img {
   background-color: transparent;
 }
-
+/* 
 .clock {
   position: fixed;
   top: 8vh;
@@ -76,7 +76,7 @@
   color: #fafafa;
 
   text-shadow: 1px 1px rgba(0,0,0,0.3);
-}
+} */
  
 .weather {
   position: absolute;
@@ -116,9 +116,9 @@
     left: 1em;
     font-size: 1rem;
   }
-  .clock {
+  /* .clock {
     font-size: 0.4rem;
-  }
+  } */
 
   .container3 .img {
     background-repeat: no-repeat;
