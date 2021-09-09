@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import HamburgerMenu from "./HamburgerMenu";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
+import { AiOutlineClose } from 'react-icons/ai'
+import { VscMenu } from 'react-icons/vsc'
 
-const closeBtn = <FontAwesomeIcon icon={faTimes} />
-const openBtn = <FontAwesomeIcon icon={faBars} /> 
+
+
+const openBtn = <VscMenu />
+const closeBtn = <AiOutlineClose />
+
 
 const Btn = styled.div`
-  width: 2em;
-  height: 2em;
+  width: 2rem;
+  height: 2rem;
   position: fixed;
   right: 1rem;
   top: 1rem;
@@ -18,19 +22,35 @@ const Btn = styled.div`
   justify-content: space-around;
   flex-flow: column nowrap;
   cursor: pointer;
-  color: white;
+  color: #fafafa;
   
-
   .open {
-      position: absolute;
+      position: relative;
       font-size: 1.5rem;
       opacity: ${({ isOpen }) => (isOpen ? 0 : 1)};
       transform: ${({isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
       transition: transform 0.5s ease, opacity 0.3s ease;
+
+      ::before, ::after {
+      content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background: inherit
   }
+  
+  ::before {
+    bottom: 12px
+  }
+  
+  ::after {
+    bottom: 6px
+  }
+  }
+  
 
   .close {
-    postition: absolute;
+    position: absolute;
     font-size: 1.5rem;
     transition: transform 0.5s ease, opacity 0.4s ease;
     opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};

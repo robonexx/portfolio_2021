@@ -3,23 +3,28 @@ import styled from 'styled-components'
 
 
 const Title = styled.h1`
-font-family: 'Exo 2';
-font-weight: 200;
+font-family: 'Darker Grotesque';
+font-weight: 100;
 letter-spacing: 2px;
-position: fixed;
-top: 1vh;
-left: 10vw;
-font-size: 2.7rem;
+padding: 0 5rem;
+font-size: 3rem;
+    text-decoration: none;
 color: ${({ theme }) => theme.logo};
-z-index: 20;
+z-index: 100;
+
 @media (max-width: 768px) {
     font-size: 2rem;
 }
 `;
+
 const Logo = () => {
     return ( 
         <>
-        <Title>[kɹiːˌe͡ɪtˈɪvɪti]</Title>
+            
+            <Title>
+                    [kɹiːˌe͡ɪtˈɪvɪti]
+            </Title>
+            
         </>
      );
 }

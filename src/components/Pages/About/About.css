@@ -7,12 +7,13 @@
 .container {
   position: absolute;
   top: 8vh;
-  width: 100%;
+  width: 100vw;
   height: 92vh;
   display: grid;
   grid-template-columns: 50fr 20fr 25fr 30fr;
   grid-template-rows: 15fr 40fr 40fr;
   grid-gap: 25px;
+  background: #92747c66;
 }
 
 .container .img {
@@ -21,4 +22,5 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  opacity: 0.7;
 }

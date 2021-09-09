@@ -5,10 +5,8 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
      color: ${({ theme }) => theme.text}; 
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
-    transition: all 0.1s linear;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+    transition: all 0.3s ease-in;
+    width: 100vw;
+    overflow-x: hidden;
   }
   `;

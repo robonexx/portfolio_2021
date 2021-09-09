@@ -49,27 +49,27 @@ const Ul = styled.ul`
 }
 
 a:nth-of-type(4n+1) {
-  background: #0a6c74;
-  border: 1px solid #0A6C74;
-  transition-delay: 0.3s;  
+  background: #282828;
+  border: 1px #282828;
+  transition-delay: 0.1s;  
 }
 a:nth-of-type(4n+2) {
-  background: #0E7C86;
-  border: 1px solid #0E7C86;
+  background: #383838;
+  border: 1px solid #383838;
   margin-left: 2rem;
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
 }
 a:nth-of-type(4n+3) {
-  background: #14919B;
-  border: 1px solid  #14919B;
+  background: #484848;
+  border: 1px solid  #484848;
   margin-left: 4rem;
-  transition-delay: 0.9s;
+  transition-delay: 0.6s;
 }
 a:nth-of-type(4n+4) {
-  background: #2CB1BC;
-  border: 1px solid #2CB1BC;
+  background: #585858;
+  border: 1px solid #585858;
   margin-left: 6rem;
-  transition-delay: 0.12s;
+  transition-delay: 0.9s;
 }
 
 a:hover,

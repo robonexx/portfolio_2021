@@ -11,8 +11,6 @@ import Modal from '../../Modal/Modal';
  transform: translate(-50%);
  width: 100%;
  height: 92vh;
- border-radius: 10px;
- color: #fafafa;
  z-index: 5;
   `;
 
@@ -39,15 +37,25 @@ import Modal from '../../Modal/Modal';
   `
  const Title = styled.h2` 
     position: absolute;
-    top: 12vh;
-    right: 3vw;
-    font-size: 3rem;
+    top: 3vh;
+    left: 2;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Baskervville', sans-serif;
     color: #fafafa;
     text-shadow: 3px 3px 5px black;
-    border-top-left-radius: 20px;
     padding: 0.5rem;
-    background: linear-gradient(120deg, black, transparent 80%);
     z-index: 50;
+
+    span {
+        margin-left: 50px;
+    }
+    span:nth-child(3) {
+        margin-left: 200px;
+    }
+    span:last-child {
+        margin-left: 450px;
+    }
 
     @media (max-width: 768px) {
         font-size: 1.2rem;
@@ -62,7 +70,7 @@ import Modal from '../../Modal/Modal';
     @media (max-width: 768px) {
         font-size: 3rem;
         writing-mode: vertical-lr;
-    
+    }
   `;
  const Dancer = styled.h2` 
     font-size: 3rem;
@@ -72,7 +80,7 @@ import Modal from '../../Modal/Modal';
     @media (max-width: 768px) {
         font-size: 2.5rem;
         writing-mode: vertical-rl;
-    
+    }
   `;
   const Button = styled.button`
   padding: 8px 16px;
@@ -132,35 +140,27 @@ return (
 </div>
 {showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal}/>}
                 <animated.div style={fadeIn}>
-                    <Title>Robert "Rob-One" Wägar</Title>
+                    <Title><span>Robert</span><br/><span>"Rob One"</span><br/><span>Wägar</span></Title>
                 </animated.div>
         <Content>
-                <DevSection>
+                {/* <DevSection>
                     <animated.div style={fadeInA}>
                         <Button onClick={openModal} >
                     <Developer>Developer</Developer>
                     </Button>
-                    </animated.div>
-               {/*  <TextP>
-                    I'm junior developer studying at KYH front-end developer education and I will graduate 2021. So far I have managed to get a wider knowledge in HTML, CSS, JS, REACT, FIGMA. Learning more and more each day that goes by.
-                </TextP> */}
+                </animated.div>
+            </DevSection> */}
                 
-
-            </DevSection>
-                
-            <DancerSection>  
+            {/* <DancerSection>  
                 <animated.div style={fadeInA}>
                     <Button>
                 <Dancer>Dancer</Dancer>
                 </Button>
                 </animated.div>
-                    {/* <TextP>
-                        As a dancer I been working for quite some time. I have danced since I was 8 years old and been working professionaly with dance since 1991.
-                        I been teaching dance at many schools around sweden and Stockholm where I´m based. Still teaching at Danscenter/ Fryshuset, House of Shapes and Haninge Dansstudio. 
-                    </TextP> */}
-                </DancerSection>
+                </DancerSection> */}
                 
-            </Content>
+        </Content>
+        
             </animated.div>
         
         

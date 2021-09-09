@@ -1,0 +1,15 @@
+/* $breakpoint-tablet: 768px; */
+
+.home {
+  width: 100vw;
+  height: 100%;
+
+  @media screen and (max-width: 768px) { 
+    padding: 1rem;
+  }
+}
+
+
+
+    
+

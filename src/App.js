@@ -7,10 +7,12 @@ import ThemeToggle from "./components/Toggle/Toggler"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring'
 import Header from './components/Header';
-import Home from './components/Pages/Home/Home'
+import Home from './components/Pages/Home/Home';
 import About from './components/Pages/About/About';
-import Projects from './components/Pages/Projects/Projects'
-import Contact from './components/Pages/Contact/Contact'
+import Projects from './components/Pages/Projects/Projects';
+import Developer from './components/Pages/Developer/Developer'
+import Dancer from './components/Pages/Dancer/Dancer'
+import Contact from './components/Pages/Contact/Contact';
 
 const App= () => {
 
@@ -36,6 +38,8 @@ const App= () => {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/projects" component={Projects} />
+                    {/* <Route exact path="/developer" component={Developer} />
+                    <Route exact path="/dancer" component={Dancer} /> */}
                     <Route exact path="/contact" component={Contact} />
                   </Switch>
                   </div>

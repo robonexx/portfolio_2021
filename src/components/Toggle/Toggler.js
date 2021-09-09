@@ -21,7 +21,7 @@ const Button = styled.button`
   position: fixed;
   top: 2vh;
   left: 1vw;
-  z-index: 50;
+  z-index: 100;
   outline: none;
 `;
 

@@ -11,12 +11,11 @@ const Content = styled.div`
     left: 0;
     width: 100vw;
     height: 8vh;
-    border-bottom: 1px solid #fafafa;
-    /* display: flex;
-    justify-content: space-betweeen; */
     align-items: center;
-    background: rgb(5, 5, 20, 0.7);
-    z-index: 20;
+    background: #1f2833;
+    z-index: 99;
+    padding: 0.25rem;
+
     `;
 
 const Header = () => {
@@ -30,7 +29,7 @@ const Header = () => {
 
     return ( 
         <Content>
-         <Logo />
+            <Logo />
          {isDesktopOrLaptop && <Navbar />}
          {isMobileOrTablet && <MenuBtn />}
         </Content>
