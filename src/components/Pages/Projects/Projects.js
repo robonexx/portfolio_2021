@@ -1,76 +1,131 @@
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import colors from '../../video/paint.mp4';
-import projectImg from '../../../img/beyou.jpg';
+import colors from '../../video/paint.webm';
 import { useSpring, animated } from 'react-spring'
-import './Projects.css'
+import './Projects.scss'
 
 
-const BGImg = styled.img.attrs({ src: `${projectImg}`})`
-postition: absolute;
-top: 8vh;
-width: 100%;
-height: 100%;
-opacity: 0.5;
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(204, 125, 243, 0.377);
-    background-blend-mode: difference;
+const Card = styled.div`
 
-z-index: 1;
-`; 
+display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: ${({ theme }) => theme.primaryCards};
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
 
-const Container = styled.div`
+  &:hover {
+    transform: translateY(-2px);
+  transition: 0.4s ease-out;
+  
+  }
+
+  &:hover ~ & {
+    position: relative;
+    left: 2px;
+    transition: 0.4s ease-out;
+  }
+
+  @media (max-width:900px) {
+    height: 160px;
+    width: 100px;
+        
+    }
+  `;
+
+
+const Title = styled.div`
+color: ${({ theme }) => theme.fontColor};
+font-weight: 600;
 position: absolute;
-top: 20vh;
-left: 50%;
-margin-top: 2vh;
-transform: translate(-50%);
-width: 80%;
-height: 74vh;
-margin: 0px auto;
-padding: 6%;
-padding-top: 3%;
-background: rgb(5, 5, 20, 0.1);
-border-radius: 10px;
-color: #fafafa;
-box-shadow: 2px 4px 5px rgb(0, 0, 0, 0.5);
-z-index: -1;
+left: 20px;
+top: 15px;
+
+@media (max-width:1200px) {
+    left: 10px;
+    font-size: 0.8rem;
+    word-break: break-all;
+    }
+
 `;
 
-    const Title = styled.h1`
-    background: -webkit-linear-gradient(#603f, rgba(0,0,0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Abril Fatface', cursive;
-    font-size: 6rem;
-    filter: drop-shadow(6px 3px 2px #6dd4);
-    text-align: center;
-    text-transform: uppercase;
-    z-index: 10;
+const Bar = styled.div`
+position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
 
-    @media (max-width: 768px) {
-        font-size: 3rem;
-        width: 100%;
+  @media (max-width:1200px) {
+    top: 70px;
+    left: 10px;
+    width: 90px;
+        
     }
-    `;
 
-    const Section = styled.section`
-    font-family: 'Special Elite', cursive;
-    font-size: 3rem;
-    margin-top: 20vh;
-    color: ${({ theme }) => theme.text};
-    text-shadow: 2px 2px 2px ${({ theme }) => theme.textShadow};
+  `;
 
-    @media (max-width: 768px) {
-        font-size: 2rem;
-        width: 100%;
+const EmptyBar = styled.div`
+  background-color: #2e3033;
+  width: 90%;
+  height: 100%;
+
+  `;
+
+const FilledBar = styled.div`
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(90deg, #9ccc9c 0%, #649568 65%,#149414 100%);
+  transition: 0.6s ease-out;
+
+  ${Card}:hover & {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+ 
+  `;
+
+const Info = styled.div`
+color: ${({ theme }) => theme.fontColor};
+font-size: 13px;
+font-weight: 600;
+position: absolute;
+left: 12px;
+top: 155px;
+margin-right: 9px;
+
+@media (max-width:900px) {
+    left: 10px;
+    font-size: 0.4rem;
+    left: 1rem;
+    top: 5rem;
+    word-break: break-all;
+    
     }
-    `;
+
+
+`;
 
 
 const Projects = () => {
+
+    const [repos, setRepos] = useState([])
+
+    useEffect(async () => {
+        const res = await fetch('https://api.github.com/users/robonexx/repos')
+        const data = await res.json()
+        console.log(data)
+        setRepos(data)
+    }, [])
+
 
     const fade = useSpring({from: {opacity: 0}, opacity: 1}); 
     const fadeIn = useSpring({from: {transform: 'translateY(-300px)', opacity: 0}, transform: 'translateY(0px)', opacity: 1});
@@ -94,19 +149,32 @@ const Projects = () => {
             >
                 <source src={colors} type="video/mp4"/>
             </video> 
-            <BGImg />
-            <Container>
+           <div className="wrapper">
                 <animated.div  style={fadeIn}>
-                <Title>Projects</Title>
+                <h1>Some of the projects I've worked on</h1>
                 </animated.div>
                 <animated.div>
-                <Section style={fade}>
-                <p>Coming soon...</p>
-                <p>Until then you can check my github or codepen you'll find the link on my contact page</p>
-                </Section>
+                    <div className="container">
+                        <div className="repos" style={fade}>
+                {
+                                    repos.map(({name, html_url, description, id}) => {
+                                        return (
+                                            <Card key={id}>
+                                                <Title>{name}</Title><Bar><EmptyBar></EmptyBar><FilledBar></FilledBar></Bar><Info>{description}</Info>
+                                                
+                                                    <button onClick={()=> window.open(html_url, "_blank")} className="repoBtn">Check</button>
+                                                
+                                            </Card>
+
+                                        )
+
+                                    })
+                                }
+                    </div>
+                </div>
                 </animated.div>
                 
-            </Container>
+            </div>
             </animated.div>
         
         

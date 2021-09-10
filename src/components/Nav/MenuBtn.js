@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import HamburgerMenu from "./HamburgerMenu";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { AiOutlineClose } from 'react-icons/ai'
 import { VscMenu } from 'react-icons/vsc'
 

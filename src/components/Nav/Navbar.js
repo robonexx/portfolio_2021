@@ -10,7 +10,7 @@ left: 0;
 width: 100vw;
 height: 8vh;
 z-index: 100;
-overflow-x: hidden;
+overflow: hidden;
 
 `;
 const NavStyle = styled.div`

@@ -1,87 +1,16 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-import './About.css'
+import './About.scss'
 import Modal from '../../Modal/Modal';
+import AboutImg from '../../../img/ruperto.jpg'
+import { Github } from '@styled-icons/feather/Github'
+import { Linkedin } from '@styled-icons/feather/Linkedin'
+import { Facebook } from '@styled-icons/feather/Facebook'
+import {Instagram } from '@styled-icons/feather/Instagram'
 
- const Content = styled.div` 
- position: absolute;
- top: 8vh;
- left: 50%;
- transform: translate(-50%);
- width: 100%;
- height: 92vh;
- z-index: 5;
-  `;
 
-  const DevSection = styled.div`
-    position: absolute;
-    top: 30vh;
-    left: 3vw;
-  @media (max-width: 768px) {
-  top: 15vh;
-  left: 10vw;
-  width: 24vw;
-  margin-bottom: 6vh;
-  }
-  `
-  const DancerSection = styled.div`
-        position: absolute;
-        bottom: 13vh;
-        right: 32vw;
-  @media (max-width: 768px) {
-  bottom: 5vh;
-  right: 20vw;
-  width: 30vw;
-}
-  `
- const Title = styled.h2` 
-    position: absolute;
-    top: 3vh;
-    left: 2;
-    font-size: 4rem;
-    font-weight: 700;
-    font-family: 'Baskervville', sans-serif;
-    color: #fafafa;
-    text-shadow: 3px 3px 5px black;
-    padding: 0.5rem;
-    z-index: 50;
-
-    span {
-        margin-left: 50px;
-    }
-    span:nth-child(3) {
-        margin-left: 200px;
-    }
-    span:last-child {
-        margin-left: 450px;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 1.2rem;
-        
-    }
-  `;
- const Developer = styled.h2` 
-    font-size: 3rem;
-    color: ${({ theme }) => theme.text};
-    text-shadow: 2px 2px black;    
-
-    @media (max-width: 768px) {
-        font-size: 3rem;
-        writing-mode: vertical-lr;
-    }
-  `;
- const Dancer = styled.h2` 
-    font-size: 3rem;
-    color: ${({ theme }) => theme.text};
-    text-shadow: 2px 2px black;
-
-    @media (max-width: 768px) {
-        font-size: 2.5rem;
-        writing-mode: vertical-rl;
-    }
-  `;
+ 
   const Button = styled.button`
   padding: 8px 16px;
   border-radius: 3px;
@@ -124,26 +53,43 @@ const About = () => {
 return ( 
     <animated.div className="about" style={fade}>
 
-        <div className="container">
-        <div className="no-img"></div>
-        <div className="img"></div>
-        <div className="no-img"></div>
-        <div className="no-img"></div>
-        <div className="no-img"></div>
-        <div className="img"></div>
-        <div className="img"></div>
-        <div className="no-img"></div>
-        <div className="img"></div>
-        <div className="no-img"></div>
-        <div className="no-img"></div>
-        <div className="img"></div>
-</div>
 {showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal}/>}
-                <animated.div style={fadeIn}>
-                    <Title><span>Robert</span><br/><span>"Rob One"</span><br/><span>Wägar</span></Title>
-                </animated.div>
-        <Content>
-                {/* <DevSection>
+               {/*  <animated.div style={fadeIn}>
+                    <h1 className="about-title"><span>Robert</span><br/><span>"Rob One"</span><br/><span>Wägar</span></h1>
+                </animated.div> */}
+                   <div className="about-wrapper">
+                    <div className="photo">
+                {/* <img src={AboutImg} alt="" /> */}
+                <div className="about-img"></div>
+                    </div>
+                    <div className="details">
+                        <p className="heading">
+                    <h3 className="name">Robert Wägar</h3>
+                    <span className="developer">Developer </span><i>/</i><span className="dancer"> Dancer</span>
+                        </p>
+                        <p className="text fadeInUp animated">Hello, I'm Rob from Sweden. I'm a web developer with a passion for creative solutions. 
+                            I've been working as dancer all my life so I'm used to work with creativity and also I've been teaching so helping others is close to my heart. <br/> I'm still learning and developing my skills on coding and designing.</p>
+                    </div>
+                        <div className="social">
+                             <a href="https://github.com/robonexx" target="_blank"><Github className="soc-item soc-icon"/></a>
+                           <a href="https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/" target="_blank"> <Linkedin className="soc-item soc-icon"/></a>
+                           <a href="https://facebook.com/robert.r.wagar" target="_blank"> < Facebook className="soc-item soc-icon"/></a>
+                            <a href="https://www.instagram.com/r.o.b_o.n.e/" target="_blank">< Instagram className="soc-item soc-icon"/></a>
+                        </div>
+                </div>
+        <div className="about-content">
+        </div>
+        
+            </animated.div>
+        
+        
+     );
+}
+ 
+export default About;
+
+
+{/* <DevSection>
                     <animated.div style={fadeInA}>
                         <Button onClick={openModal} >
                     <Developer>Developer</Developer>
@@ -159,12 +105,3 @@ return (
                 </animated.div>
                 </DancerSection> */}
                 
-        </Content>
-        
-            </animated.div>
-        
-        
-     );
-}
- 
-export default About;

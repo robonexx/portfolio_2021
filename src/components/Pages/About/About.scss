@@ -1,0 +1,234 @@
+.about{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  transition: all linear 0.6s;
+}
+
+.about-wrapper {
+  margin-top: 8vh;
+  width: 100vw;
+  height: 100%;
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+.about .photo {
+  margin: 10rem auto 2rem;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  border-radius: 50%;
+  border: 6px solid #ccc
+}
+.about-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height:350px;
+  background-image: url(../../../img/ruperto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+  transition: all .2s ease-in-out 0s;
+
+  &:hover {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-image: url(../../../img/rupertohover.jpg);
+  }
+
+  ::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    background: rgba(29, 13, 88, 0.2);
+    transition: all .3s ease-in-out 0s
+  }
+}
+
+
+/* .about .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  transition: all .2s ease-in-out 0s;
+
+  &:hover {
+    background-image: url(../../../img/rupertohover.jpg);
+  }
+
+  ::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    background: rgba(29, 13, 88, 0.2);
+    transition: all .3s ease-in-out 0s
+  }
+}
+ */
+
+
+
+.about .details .heading {
+  padding: 5px;
+  margin: 1rem auto;
+  text-align: center;
+  color: #ccc;
+}
+
+.about .details .heading>.name {
+  font-size: 64px;
+  font-weight: 200;
+  text-transform: uppercase;
+  border-right: 1px solid #fff;
+}
+
+
+.about .details .heading i {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 200;
+}
+.about .details .heading .developer,
+.about .details .heading .dancer {
+  font-size: 42px;
+  font-weight: 200;
+}
+
+.about .details .text {
+  margin: 3rem 20rem;
+  font-size: 48px;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s
+}
+
+
+.about .social {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  z-index: 99;
+  height: 50px;
+  transition: all .3s ease-in-out 0s
+}
+
+.about .social .soc-item {
+  margin: 1rem 1.5rem;
+}
+
+.about .social .soc-icon {
+  z-index: 19;
+  color: rgb(255, 255, 255);
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  transition: all .3s ease-in-out;
+
+}
+
+
+
+.about .social .soc-item:hover {
+  color: #92747c;
+  filter: drop-shadow(0px -4px 2px rgba(255, 255, 255, 0.432));
+}
+
+.about .container {
+  position: absolute;
+  top: 8vh;
+  width: 100vw;
+  height: 92vh;
+  display: grid;
+  grid-template-columns: 25fr 45fr 35fr 35fr;
+  grid-template-rows: 25fr 15fr 60fr;
+  grid-gap: 25px;
+  background: #92747c66;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 20fr 20fr 25fr 35fr;
+  grid-template-rows: 20fr 40fr 40fr;
+    
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+.about-content {
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 92vh;
+  z-index: 5;
+} 
+
+.about-title {
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Baskervville', sans-serif;
+  color: #fafafa;
+  text-shadow: 3px 3px 5px black;
+  padding: 0.5rem;
+  z-index: 50;
+  
+  span {
+      margin-left: 50px;
+  }
+  span:nth-child(3) {
+      margin-left: 100px;
+  }
+  span:last-child {
+      margin-left: 200px;
+  }
+  
+  @media (max-width: 768px) {
+      font-size: 1.2rem;
+      
+  }
+  
+
+}
+
+
