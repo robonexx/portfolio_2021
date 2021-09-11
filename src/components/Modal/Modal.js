@@ -1,17 +1,19 @@
 import React, { useRef } from 'react'
 import {useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
-import { FaTimes } from 'react-icons/fa'
+import { AiOutlineClose } from 'react-icons/ai'
 
 
-const CloseModalBtn = styled(FaTimes)`
+const CloseModalBtn = styled(AiOutlineClose)`
 cursor: pointer;
 position: absolute;
 top: 1em;
 right: 1em;
-width: 32px;
-heigth: 32px;
-padding: 0;
+width: 42px;
+height: 42px;
+padding: 0.5rem;
+color: tomato;
+
 z-index: 20; 
  &:hover,
  &:focus {
@@ -21,8 +23,8 @@ z-index: 20;
 
 const ModalBg = styled.div`
     position: absolute;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 100%;
     background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
@@ -31,8 +33,8 @@ const ModalBg = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-    width: 50%;
-    height: 80%;
+    margin: 2rem;
+    display: flex;
     box-shadow: 0px 6px 10px rgba(0,0,0,0.8);
     background-color: rgba(0,0,0,0.9);
     color: #fafafa;
@@ -50,9 +52,10 @@ const ModalWrapper = styled.div`
 
 const ModalContent = styled.div`
 display: flex;
+height: 100%;
 flex-direction: column;
 justify-content: center;
-align-items: left;
+align-items: center;
 line-height: 1.2;
 padding: 20px 50px;
 color: #fafafa;

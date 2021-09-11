@@ -3,14 +3,10 @@ import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import './About.scss'
 import Modal from '../../Modal/Modal';
-import AboutImg from '../../../img/ruperto.jpg'
-import { Github } from '@styled-icons/feather/Github'
-import { Linkedin } from '@styled-icons/feather/Linkedin'
-import { Facebook } from '@styled-icons/feather/Facebook'
-import {Instagram } from '@styled-icons/feather/Instagram'
+import Developer from './Developer'
 
 
- 
+ /* 
   const Button = styled.button`
   padding: 8px 16px;
   border-radius: 3px;
@@ -20,6 +16,7 @@ import {Instagram } from '@styled-icons/feather/Instagram'
   filter: drop-shadow(2px 2px rgba(255,255,255,0.3));
   outline: none;
   cursor: pointer;
+  z-index: 100;
 
   &:hover,
       &:focus {
@@ -28,6 +25,17 @@ import {Instagram } from '@styled-icons/feather/Instagram'
         box-shadow: 0px 2px 3px rgba(0,0,0,0.4)         
       }
   `
+
+const Developer = styled.h2` 
+font-size: 3rem;
+color: ${({ theme }) => theme.text};
+text-shadow: 2px 2px black;    
+
+@media (max-width: 768px) {
+    font-size: 3rem;
+    writing-mode: vertical-lr;
+}
+`; */
  /* const TextP = styled.p` 
     font-size: 22px;
     color: #fafafa;
@@ -52,31 +60,38 @@ const About = () => {
 
 return ( 
     <animated.div className="about" style={fade}>
+        {showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal}/>}
+        <div className="about-wrapper-top">
+       
+        <div className="about-choice-img"></div>
+        <div className="heading">
+                    <h3 className="name">Robert Wägar</h3>
+                <span className="developer" onClick={openModal}>Developer </span><i>/</i><span className="dancer"> Dancer</span>
+              
+                        </div>
+        </div>
+        <Developer />
 
-{showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal}/>}
+
                {/*  <animated.div style={fadeIn}>
                     <h1 className="about-title"><span>Robert</span><br/><span>"Rob One"</span><br/><span>Wägar</span></h1>
                 </animated.div> */}
-                   <div className="about-wrapper">
+        
+                  {/*  <div className="about-wrapper">
                     <div className="photo">
-                {/* <img src={AboutImg} alt="" /> */}
                 <div className="about-img"></div>
                     </div>
                     <div className="details">
-                        <p className="heading">
+                        <div className="heading">
                     <h3 className="name">Robert Wägar</h3>
-                    <span className="developer">Developer </span><i>/</i><span className="dancer"> Dancer</span>
-                        </p>
-                        <p className="text fadeInUp animated">Hello, I'm Rob from Sweden. I'm a web developer with a passion for creative solutions. 
-                            I've been working as dancer all my life so I'm used to work with creativity and also I've been teaching so helping others is close to my heart. <br/> I'm still learning and developing my skills on coding and designing.</p>
-                    </div>
-                        <div className="social">
-                             <a href="https://github.com/robonexx" target="_blank"><Github className="soc-item soc-icon"/></a>
-                           <a href="https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/" target="_blank"> <Linkedin className="soc-item soc-icon"/></a>
-                           <a href="https://facebook.com/robert.r.wagar" target="_blank"> < Facebook className="soc-item soc-icon"/></a>
-                            <a href="https://www.instagram.com/r.o.b_o.n.e/" target="_blank">< Instagram className="soc-item soc-icon"/></a>
+                    <span className="developer" >Developer </span><i>/</i><span className="dancer"> Dancer</span>
                         </div>
-                </div>
+                        <div className="text fadeInUp animated">Hello, I'm Rob from Sweden. I'm a web developer with a passion for creative solutions. 
+                            I've been working as dancer all my life so I'm used to work with creativity and also I've been teaching so helping others is close to my heart. <br/> I'm still learning and developing my skills on coding and designing.</div>
+                    </div>
+                        
+                </div> */}
+        
         <div className="about-content">
         </div>
         

@@ -87,6 +87,7 @@ const FilledBar = styled.div`
   transition: 0.6s ease-out;
 
   ${Card}:hover & {
+      max-width: 100%;
     width: 120px;
     transition: 0.4s ease-out;
   }
