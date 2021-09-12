@@ -1,0 +1,12 @@
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    background: var(--color-bg);
+    z-index: 99;
+    padding: 0.25rem;
+}
+    

@@ -13,6 +13,7 @@ import Projects from './components/Pages/Projects/Projects';
 import Developer from './components/Pages/Developer/Developer'
 import Dancer from './components/Pages/Dancer/Dancer'
 import Contact from './components/Pages/Contact/Contact';
+import Error from './components/Pages/Error'
 
 const App= () => {
 
@@ -40,7 +41,8 @@ const App= () => {
                     <Route exact path="/projects" component={Projects} />
                     {/* <Route exact path="/developer" component={Developer} />
                     <Route exact path="/dancer" component={Dancer} /> */}
-                    <Route exact path="/contact" component={Contact} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="*" component={Error}/>
                   </Switch>
                   </div>
             </ThemeProvider> 

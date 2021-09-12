@@ -1,0 +1,31 @@
+.logo {
+    position: relative;
+    margin-left: 1rem;
+    height: inherit;
+    font-size: 2.4rem;
+    width: 100%;
+    color: var(--color-halloffame);
+    z-index: 20;
+    background: transparent;
+    text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.4);
+    padding: 0.1rem 1rem;
+    border-radius: 2px;
+  }
+  
+  .logo:after {
+    content: "Be Creative!";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-100vw);
+    top: 0.1rem;
+    color: var(--color-txt);
+    background: transparent;
+    z-index: -10;
+  }
+  
+  .logo:hover:after {
+    transform: translateX(1rem);
+    transition: all 0.8s ease-in-out;
+    width: 200%;
+    z-index: 1;
+  }

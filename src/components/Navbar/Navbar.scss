@@ -1,0 +1,240 @@
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 6vh;
+  background: transparent;
+  z-index: 100;
+  font-family: var(--font);
+
+}
+/* 
+.navbar a {
+  text-decoration: none;
+  color: $txtPrimary;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 200;
+}  */
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 100vw;
+  justify-content: end;
+}
+/* 
+.nav-item {
+  display: flex;
+  align-items: center;
+} */
+/* 
+.nav-links {
+  color: $txtPrimary;
+  text-decoration: none;
+  padding: 0.1rem 0.3rem;
+  margin-right: 2rem;
+} */
+
+/* .nav-menu .nav-item > a:hover {
+  background-color: #f5f1f1;
+  color: #000000;
+  border-radius: 3px;
+  font-weight: 200;
+} */
+
+.nav-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  
+  grid-gap: 1.2rem;
+ padding: 0.5rem;
+  
+
+  &::after {
+      border-right: solid 15px transparent;
+       border-left: solid  15px #fafafa;
+      border-top: solid transparent 15px;
+      border-bottom: solid transparent 15px;
+      transform: translateX(-70%) translateY(-10%);
+      position: absolute;
+      z-index: -1;
+      content: "";
+      display: block;
+}
+
+
+.navbar ul li {
+  /* separate the list items more prominently */
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+}
+
+
+a {
+  font-weight: 200;
+  color: var(--color-txt);
+  text-decoration: none;
+  font-family: "Darker Grotesque", sans-serif;
+  /* position relative to absolute position the connected pseudo element */
+  position: relative;
+  font-size: 1.4rem;
+  text-decoration: none;
+  line-height: 1;
+  color: var(--color-txt);
+  
+  small {
+      font-size: .5rem;
+      display: block;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: 200;
+      text-align: right;
+      color: var(--color-txt);
+  }
+  
+}
+
+a:before {
+  /* sätter in en border med pseudo element  */
+  content: "";
+  position: absolute;
+  top: 98%;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  /* transition for the hover state */
+  transition: all 0.3s ease-out;
+}
+
+li:nth-of-type(1) a:before {
+  background: var(--color-home);
+}
+li:nth-of-type(2) a:before {
+  background: var(--color-about);
+}
+ li:nth-of-type(3) a:before {
+  background: var(--color-history);
+}
+li:nth-of-type(4) a:before {
+  background: var(--color-contacts);
+}
+
+.nav-links a:hover:before {
+  /* hover, ändrar så strecket går från mitten till höger och vänster */
+  bottom: -2px;
+  left: -4px;
+  right: -4px;
+
+}
+
+&:hover,
+  &:focus {
+  a {
+text-shadow: -2px -1px 0px rgba(0,0,0,0.32);
+color: #FA9F8D;
+  }
+  small {
+      color: var(--color-home);
+  }
+   &::after {
+      border-left: solid 15px var(--color-history);
+  } 
+  
+} 
+
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  /* .NavbarItems {
+      position: relative;
+    } */
+
+  .navbar {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
+
+  .nav-menu {
+    position: absolute;
+    top: 6vh;
+    right: -110%;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 94vh;
+    opacity: 0;
+    transition: all 0.5s ease;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu.active {
+    box-sizing: border-box;
+    /* border: 1px solid rgba(0, 0, 0, .6); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6),
+      inset 0 0 1px 0px rgba(12, 12, 12, 0.527);
+    background: rgba(0, 0, 0, 0.833);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(3px);
+    width: 100%;
+    align-items: center;
+    right: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
+
+  .nav-item:nth-child(1) {
+    margin-top: 0rem;
+  }
+
+  .nav-links {
+    text-align: center;
+    width: 100px;
+    padding: 4px 8px;
+    line-height: 3rem;
+  }
+
+  .nav-menu .nav-item > a:hover {
+    font-weight: 400;
+    background: none;
+    color: #fff;
+    transform: scale(0.96);
+    text-shadow: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+  }
+
+  .menu-icon {
+    display: inline-block;
+    position: absolute;
+    top: 0.4rem;
+    right: 1.5rem;
+    width: 36px;
+    cursor: pointer;
+    z-index: 100;
+  }
+}
