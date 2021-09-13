@@ -1,9 +1,9 @@
 .home-intro {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    font-family: 'Darker Grotesque', sans-serif;
+    font-family: var(--font);
     overflow-x: hidden;
     cursor: none;
   }
@@ -45,7 +45,6 @@
     left: 30%;
     transform: translateX(-50%);
     font-size: 3rem;
-    font-family: 'Darker Grotesque', sans-serif;
     color: var(--color-txt);
 
     
@@ -95,11 +94,12 @@
   }
 /* ================================================================ */
   .mid-section-top {
-    background-color: var(--color-bg-scnd);
-      margin-top: 100vh;
-      margin: 100vh 0 0 30vw;
-      border: solid 3px var(--color-txtSnd);
-      border-bottom: hidden;
+    position: relative;
+    margin: 100vh 0 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-bg);
+      color: var(--color-txt);
      
     h2 {
         position: relative;
@@ -120,27 +120,29 @@
         width: 1000px;
       }
 
-      @media screen and (max-width: 768px) {
-        height: fit-content;
-        padding: 2rem;
-        margin-left: 0rem;
-        margin-top: 45vh;
+      b {
+        color: var(--color-txtSnd);
+      }
+
+      @media (max-width: 768px) {
+        height: relative;
+        padding: 4rem;
+        margin: 100vh 0 0;
 
         h2 {
           position: relative;
-          margin-top: 0rem;
-          margin-left: 2rem;
+          margin: 0;
           font-size: 2.5rem;
           line-height: 3rem;
           font-weight: 200;
-          width: 400px;
+          width: 100%;
           margin-bottom: 10rem;
         }
         h2 > span {
           position: relative;
           top: 0rem;
           left: 0rem;
-          font-size:10rem;
+          font-size: 5rem;
           
           font-weight: 700;
           width: 400px;
@@ -149,68 +151,39 @@
   }
   /* =========================================================== */
   .mid-section {
-    background: #92747c;
+    background: var(-color-bg);
     color: var(--color-txt);
+    font-family: var(--font);
     position: relative;
     display: flex;
     width: 100vw;
     height: 100vh;
     line-height: 4rem;
     padding: 10rem;
-    border: solid 3px var(--color-txtSnd);
-    h1 {
-        
+    h2 {
         font-size: 5rem;
-        font-weight: 100;
+        font-weight: 200;
     }
+
     @media (max-width: 768px) {
-      position: absolute;
-      padding: 3rem;
+
+      position: relative;
+      padding: 1rem;
+      margin: 0;
       h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 2rem;
       }
     }
   }
 
-  .mid-section-left {
-    position: absolute;
-    top: 100vh;
-    left: 5vw;
-    display: block;
-    width: 40%;
-    
-
-    @media (max-width: 768px) {
-      top: -30vh;
-      position: absolute;
-      width: 100%;
-      left: 0;
-  }
-}
-
-  .mid-section .mid-section-left > h2 {
-      margin-top: 7rem;
-      margin-left: 3rem;
-    font-size: 5rem;
-    font-weight: 100;
-
-    @media (max-width: 768px) {
-      line-height: 2rem;
-     font-size: 2rem;
-     width: 400px;
-  }
-  }
-
-
-  .mid-section .mid-section-left .highlight,
-  .mid-section .mid-section-right .highlight {
+  .mid-section .highlight {
     font-weight: 700;
     font-size: 6rem;
     color: var(--color-txtSnd);
 
     @media (max-width: 768px) {
-      font-size: 2rem;
+      font-size: 3rem;
    }
   }
 
@@ -221,15 +194,19 @@
     height: 100vh;
     line-height: 4rem;
     color: var(--color-txt);
+
     @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
       line-height: 2rem;
+      padding: 2rem;
    }
   }
 
   .bottom-section-left {
     position: absolute;
-    bottom: 0vh;
-    left: 5vw;
+    top: 10vh;
+    left: 10vw;
     display: block;
     width: 40%;
     margin-bottom: 5rem;
@@ -249,7 +226,7 @@
 
   .bottom-section-right {
     position: absolute;
-    top: 50vh;
+    bottom: 10vh;
     right: 10vw;
     display: block;
     width: 40%;

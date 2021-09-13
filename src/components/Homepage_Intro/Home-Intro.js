@@ -26,17 +26,14 @@ const HomeIntro = () => {
                 </section>
                 <div className="mid-section-top">
                 <h2><span>...</span> <br/>
-                             If you are looking for a upcoming new <b>developer</b> or a experienced <b>danceteacher</b> thats been active for the past 25+ years you come to the right place</h2>    
+                             If you are looking for a <b>developer</b> to bring your ideas to life or a experienced <b>danceteacher</b> thats been active for the past 25+ years you come to the right place</h2>    
                 </div>
                                         
                     
                 <div className="mid-section">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vitae enim nostrum et similique! Ea ducimus asperiores at cumque sapiente.</h1>
-                    <div className="mid-section-left">
-                            <h2>I'm always looking for <span className="highlight">creative solutions</span> in everythings life. <br/> Without creativity we would be standing still</h2>
-                        </div>                        
+                            <h2>I'm always looking for <span className="highlight">creative solutions</span> in everythings life. <br/> Without creativity we would be standing still</h2>                   
                     </div>
-                    <section className="bottom-section">
+                    <div className="bottom-section">
                         <div className="bottom-section-left">
                             <h3>
                                 <i>My design</i> is equally about <br/>
@@ -48,7 +45,7 @@ const HomeIntro = () => {
                         <div className="bottom-section-right">
                             <h2>As a developer I'm <span className="highlight">focused</span> on finding the best solutions for you problems. <br/> And we will <br/><span className="highlight">work together</span> to do so</h2>
                         </div>
-                </section>
+                </div>
             </div>
     </animated.div>
      );

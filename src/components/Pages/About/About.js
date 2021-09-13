@@ -1,50 +1,10 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { useSpring, animated } from 'react-spring'
 import './About.scss'
 import Modal from '../../Modal/Modal';
 import Developer from './Developer'
 
-
- /* 
-  const Button = styled.button`
-  padding: 8px 16px;
-  border-radius: 3px;
-  border: none;
-  background: ${({ theme }) => theme.btnBg};
-  color: #fafafa;
-  filter: drop-shadow(2px 2px rgba(255,255,255,0.3));
-  outline: none;
-  cursor: pointer;
-  z-index: 100;
-
-  &:hover,
-      &:focus {
-        background: ${({ theme }) => theme.btnHover};
-        transform: scale(0.98);
-        box-shadow: 0px 2px 3px rgba(0,0,0,0.4)         
-      }
-  `
-
-const Developer = styled.h2` 
-font-size: 3rem;
-color: ${({ theme }) => theme.text};
-text-shadow: 2px 2px black;    
-
-@media (max-width: 768px) {
-    font-size: 3rem;
-    writing-mode: vertical-lr;
-}
-`; */
- /* const TextP = styled.p` 
-    font-size: 22px;
-    color: #fafafa;
-    text-shadow: ${({ theme }) => theme.textShadow};
-    background: linear-gradient(120deg, #111, transparent);
-    padding: 0.2rem;
-    @media (max-width: 768px) {
-        font-size: 0.7rem;
-    `; */
 
 const About = () => {
 
@@ -59,9 +19,20 @@ const About = () => {
     const fadeInA = useSpring({from: {transform: 'translateX(-800px)', opacity: 0}, transform: 'translateX(0)', opacity: 1});    
 
 return ( 
-    <animated.div className="about" style={fade}>
-        {showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal}/>}
-        <div className="about-wrapper-top">
+    /*  <animated.div className="about" style={fade}> */
+    <motion.div 
+       initial={{ opacity: 0 }}
+       animate={{ opacity: 1}}
+       exit={{ opacity: 0}}
+       transition={{ duration: 0.6, delayChildren: 0.5 }}
+          className="about">
+        {showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal} />}
+        <motion.div className="about-wrapper-top"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1}}
+          exit={{ scaleX: 0}}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          >
        
         <div className="about-choice-img"></div>
         <div className="heading">
@@ -69,7 +40,7 @@ return (
                 <span className="developer" onClick={openModal}>Developer </span><i></i><span className="dancer"> Dancer</span>
               
                         </div>
-        </div>
+                        </motion.div>
         <Developer />
 
 
@@ -95,7 +66,8 @@ return (
         <div className="about-content">
         </div>
         
-            </animated.div>
+        </motion.div>
+           /*  </animated.div> */
         
         
      );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Navbar.scss'
+import './Nav.scss'
 import { Link } from 'react-router-dom'
 import Dropdown from '../Dropdown/Dropdown'
 import Logo from '../Header/Logo'

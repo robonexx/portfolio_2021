@@ -1,6 +1,7 @@
 import React from "react";
 import Cursor from './components/Cursor/Cursor'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion'
 import { useSpring, animated } from 'react-spring'
 import Header from './components/Header';
 import Home from './components/Pages/Home/Home';
@@ -11,18 +12,15 @@ import Dancer from './components/Pages/Dancer/Dancer'
 import Contact from './components/Pages/Contact/Contact';
 import Error from './components/Pages/Error'
 
-const App = ({cursor}) => {
+const App = ({ cursor }) => {
+  
   
   const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
   
- /*  onMouseMove = { e => {
-  const cursor = document.querySelector(".cursor")
-  cursor.style.left = `${e.pageX}px`
-  cursor.style.top = `{e.pageY}px`
-  }} */
+  const location = useLocation()
 
   return (
-    <Router>
+    <div>
       <Cursor cursor={cursor} onMouseMove = { e => {
   const cursor = document.querySelector(".cursor")
   cursor.style.left = `${e.pageX}px`
@@ -30,8 +28,10 @@ const App = ({cursor}) => {
   }}/>
        <animated.div className="App" style={fade}>
               <Header />
-                <div className="content">
-          <Switch>
+        <div className="content">
+        <AnimatePresence exitBeforeEnter
+      initial={false}>
+          <Switch location={location} key={location.pathname}>
             
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
@@ -41,12 +41,10 @@ const App = ({cursor}) => {
               <Route exact path="/contact" component={Contact} />
               <Route exact path="*" component={Error}/>
                   </Switch>
-                  </div>
-           {/*  </ThemeProvider> */} 
-         
-      
+                  </AnimatePresence>
+                  </div>     
       </animated.div>
-      </Router>
+      </div>
   );
 };
 
