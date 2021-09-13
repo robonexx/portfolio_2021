@@ -1,9 +1,5 @@
 import React from "react";
-import {ThemeProvider} from "styled-components";
-import  {useDarkMode} from './components/Toggle/UseDarkMode'
-import { GlobalStyles } from './components/Themes/GlobalStyle'
-import { lightTheme, darkTheme } from "./components/Themes/Themes"
-import ThemeToggle from "./components/Toggle/Toggler"
+import Cursor from './components/Cursor/Cursor'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring'
 import Header from './components/Header';
@@ -15,27 +11,28 @@ import Dancer from './components/Pages/Dancer/Dancer'
 import Contact from './components/Pages/Contact/Contact';
 import Error from './components/Pages/Error'
 
-const App= () => {
-
+const App = ({cursor}) => {
   
-
-  const fade = useSpring({from: {opacity: 0}, opacity: 1});
-  const [theme, themeToggler, mountedComponent] = useDarkMode();
-
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
-
-  if(!mountedComponent) return <div/>
+  const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
+  
+ /*  onMouseMove = { e => {
+  const cursor = document.querySelector(".cursor")
+  cursor.style.left = `${e.pageX}px`
+  cursor.style.top = `{e.pageY}px`
+  }} */
 
   return (
     <Router>
+      <Cursor cursor={cursor} onMouseMove = { e => {
+  const cursor = document.querySelector(".cursor")
+  cursor.style.left = `${e.pageX}px`
+  cursor.style.top = `{e.pageY}px`
+  }}/>
        <animated.div className="App" style={fade}>
-       {/*  <ThemeProvider theme={themeMode}>
-          <ThemeToggle theme={theme} toggleTheme={themeToggler} />
-            <GlobalStyles/> */}
               <Header />
                 <div className="content">
-                  <Switch>
+          <Switch>
+            
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/projects" component={Projects} />

@@ -5,6 +5,7 @@
     height: 100%;
     font-family: 'Darker Grotesque', sans-serif;
     overflow-x: hidden;
+    cursor: none;
   }
 
 
@@ -99,6 +100,7 @@
       margin: 100vh 0 0 30vw;
       border: solid 3px var(--color-txtSnd);
       border-bottom: hidden;
+     
     h2 {
         position: relative;
         margin-top: 0;

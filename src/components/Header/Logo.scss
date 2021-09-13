@@ -6,22 +6,21 @@
     color: var(--color-halloffame);
     z-index: 20;
     background: transparent;
-    padding: 0.25rem 4rem;
+    padding: 0.25rem 2rem;
   }
   
   .logo:before {
     content: "Be Creative!";
     position: absolute;
-    left: 50%;
-    transform: translateX(-100vw);
-    top: 0.1rem;
+    left: 40%;
+    transform: translateY(-100%);
     color: var(--color-txt);
     background: transparent;
     z-index: -10;
   }
   
-  .logo:hover:before {
-    transform: translateX(1rem);
+  .logo:hover :before {
+    transform: translateY(0);
     transition: all 0.8s ease-in-out;
     width: 200%;
     z-index: 1;

@@ -18,9 +18,10 @@ display: flex;
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
+  
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateX(-2px);
   transition: 0.4s ease-out;
   
   }

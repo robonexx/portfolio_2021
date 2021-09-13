@@ -31,7 +31,7 @@ z-index: 100;
     text-decoration: none;
     font-size: 1.4rem;
     background: #FFBA37;
-    color:;
+    color: #fff;
     padding: 0.5rem 2rem;
     border-radius: 0.4rem;
     box-shadow: 0px 0px 5px 3px #f4b41aa9;
