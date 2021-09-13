@@ -66,7 +66,7 @@ return (
         <div className="about-choice-img"></div>
         <div className="heading">
                     <h3 className="name">Robert Wägar</h3>
-                <span className="developer" onClick={openModal}>Developer </span><i>/</i><span className="dancer"> Dancer</span>
+                <span className="developer" onClick={openModal}>Developer </span><i></i><span className="dancer"> Dancer</span>
               
                         </div>
         </div>
