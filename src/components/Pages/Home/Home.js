@@ -14,7 +14,7 @@ return (
     initial={{ opacity: 0, scaleX: 0 }}
     animate={{ opacity: 1, scaleX: 1 }}
     exit={{ opacity: 0, scaleX: 0 }}
-    transition={{ duration: 0.6 }}
+    transition={{ duration: 0.3 }}
     className="home">
         <video autoPlay loop muted
                     style={{
@@ -22,14 +22,14 @@ return (
                         margin: "0",
                         bottom: "0",
                         left: "0",
-                        width: "100%",
-                        height: "100%",
+                        width: "100vw",
                         zIndex: "-1",
                         objectFit: "cover",
+                        overflowX: "hidden"
 
                     }}
                 >
-                    <source src={LandingVideo} type="video/webm" />
+                    <source src="{LandingVideo}" type="video/webm" />
         </video>
         <HomeIntro />            
             

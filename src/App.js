@@ -1,4 +1,5 @@
 import React from "react";
+import './App.scss'
 import Cursor from './components/Cursor/Cursor'
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion'
@@ -21,28 +22,27 @@ const App = ({ cursor }) => {
 
   return (
     <div>
-      <Cursor cursor={cursor} onMouseMove = { e => {
+      <Cursor cursor={cursor} onMouseMove = { (e) => {
   const cursor = document.querySelector(".cursor")
   cursor.style.left = `${e.pageX}px`
-  cursor.style.top = `{e.pageY}px`
+  cursor.style.top = `${e.pageY}px`
   }}/>
-       <animated.div className="App" style={fade}>
-              <Header />
-        <div className="content">
+    <animated.div className="App" style={fade}>
+    <Header />
+      <div>
         <AnimatePresence exitBeforeEnter
-      initial={false}>
+            initial={false}>
           <Switch location={location} key={location.pathname}>
-            
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/projects" component={Projects} />
-                    {/* <Route exact path="/developer" component={Developer} />
-                    <Route exact path="/dancer" component={Dancer} /> */}
-              <Route exact path="/contact" component={Contact} />
-              <Route exact path="*" component={Error}/>
-                  </Switch>
-                  </AnimatePresence>
-                  </div>     
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/developer" component={Developer} />
+                <Route exact path="/dancer" component={Dancer} />
+                <Route exact path="/contact" component={Contact} />
+                <Route exact path="*" component={Error}/>
+          </Switch>
+        </AnimatePresence>
+      </div>     
       </animated.div>
       </div>
   );

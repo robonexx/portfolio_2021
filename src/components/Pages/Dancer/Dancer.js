@@ -1,31 +1,20 @@
 import './Dancer.scss'
-import React, { useState } from 'react';
+import JudgeSolo from '../../video/judge_solo.webm'
 
 
 const Dancer = () => {
 
-    function ToggleBox({ title, children }) {
-        const [isOpened, setIsOpened] = useState(false);
-      
-        function toggle() {
-            setIsOpened(wasOpened => !wasOpened);
-        }
         return (
-            <div>
-                DANCER
-                <div className="box">
-                    <div className="boxTitle" onClick={toggle}>
-                        {title}
-                    </div>
-                    {isOpened && (
-                        <div className="boxContent">
-                            {children}
-                        </div>
-                    )}
-                </div>
+            <div className="dancer-wrapper">
+                <h1>ROB-ONE</h1>
+                <div className="overlay-vid"></div>
+              <video autoPlay="true" controls="controls"
+                    className="dance-video">
+                    <source src={JudgeSolo} type="video/webm" />
+        </video>
             </div>
         );
-    }
+    
 }
  
 export default Dancer;

@@ -67,7 +67,7 @@ const Navbar = () => {
                         <Link to="/" className="nav-links"
                             onClick={() => setIsOpen(false)}>
                             Home
-                            <small>where we sleep... Zzz</small>
+                            <small>where we live...</small>
                         </Link>
                     </li>
                     <li className="nav-item">

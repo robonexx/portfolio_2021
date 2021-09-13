@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useSpring, animated } from 'react-spring'
 import './About.scss'
 import Modal from '../../Modal/Modal';
-import Developer from './Developer'
-
 
 const About = () => {
 
@@ -24,24 +23,34 @@ return (
        initial={{ opacity: 0 }}
        animate={{ opacity: 1}}
        exit={{ opacity: 0}}
-       transition={{ duration: 0.6, delayChildren: 0.5 }}
-          className="about">
+       transition={{ duration: 0.2, delayChildren: 0.2 }}
+        className="about">
+        
         {showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal} />}
         <motion.div className="about-wrapper-top"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1}}
           exit={{ scaleX: 0}}
-          transition={{ duration: 0.4, delay: 0.4 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           >
        
         <div className="about-choice-img"></div>
         <div className="heading">
-                    <h3 className="name">Robert Wägar</h3>
-                <span className="developer" onClick={openModal}>Developer </span><i></i><span className="dancer"> Dancer</span>
+                <h3 className="name">Robert Wägar</h3>
+               
+                <span className="developer"/*  onClick={openModal} */>
+                <Link to="/developer">
+                  Developer
+                </Link>
+                </span>
+                <span className="dancer">
+                <Link to="/dancer">
+                  Dancer
+                </Link>
+                </span>
               
                         </div>
                         </motion.div>
-        <Developer />
 
 
                {/*  <animated.div style={fadeIn}>

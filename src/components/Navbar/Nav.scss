@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 6vh;
+    height: vh;
     background: var(--color-bg);
     z-index: 10;
     color: #f4f4f4;
@@ -28,11 +28,10 @@
     /* separate the list items more prominently */
         font-size: 1.4rem;
         text-transform: uppercase;
-        padding: 0.75rem 1rem;
         display: grid;
         grid-template-columns: 1fr auto;
         align-items: center;
-        grid-gap: 1.2rem;
+        grid-gap: 1.6rem;
         padding: 0.5rem;
     
 
@@ -68,21 +67,22 @@ color: #FA9F8D;
   }
   
   .navbar ul li a {
-    
         position: relative;
         font-weight: 200;
         color: var(--color-txt);
         text-decoration: none;
         font-family: "Darker Grotesque", sans-serif;
         font-size: 1.8rem;
+        padding: 0.25rem;
         line-height: 1;
         
         small {
-            font-size: .5rem;
+            font-size: 0.5rem;
+            width: fit-content;
             display: block;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-weight: 200;
-            text-align: right;
+            text-align: left;
             color: var(--color-txt);
         }
 
