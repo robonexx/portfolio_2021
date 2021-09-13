@@ -30,9 +30,9 @@ const App= () => {
   return (
     <Router>
        <animated.div className="App" style={fade}>
-        <ThemeProvider theme={themeMode}>
+       {/*  <ThemeProvider theme={themeMode}>
           <ThemeToggle theme={theme} toggleTheme={themeToggler} />
-            <GlobalStyles/>
+            <GlobalStyles/> */}
               <Header />
                 <div className="content">
                   <Switch>
@@ -45,7 +45,7 @@ const App= () => {
               <Route exact path="*" component={Error}/>
                   </Switch>
                   </div>
-            </ThemeProvider> 
+           {/*  </ThemeProvider> */} 
          
       
       </animated.div>

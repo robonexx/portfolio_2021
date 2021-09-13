@@ -1,7 +1,7 @@
 .home-intro {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     font-family: 'Darker Grotesque', sans-serif;
     overflow-x: hidden;
@@ -45,6 +45,7 @@
     transform: translateX(-50%);
     font-size: 3rem;
     font-family: 'Darker Grotesque', sans-serif;
+    color: var(--color-txt);
 
     
     h1 {
@@ -93,17 +94,19 @@
   }
 /* ================================================================ */
   .mid-section-top {
+    background-color: var(--color-bg-scnd);
       margin-top: 100vh;
-      margin-left: 30vw;
+      margin: 100vh 0 0 30vw;
+      border: solid 3px var(--color-txtSnd);
+      border-bottom: hidden;
     h2 {
         position: relative;
-        margin-top: 5rem;
+        margin-top: 0;
         margin-left: 20rem;
         font-size: 6rem;
         line-height: 6rem;
         font-weight: 200;
         width: 1000px;
-        margin-bottom: 10rem;
       }
       h2 > span {
         position: absolute;
@@ -144,13 +147,15 @@
   }
   /* =========================================================== */
   .mid-section {
-    background: #92747c66;
+    background: #92747c;
+    color: var(--color-txt);
     position: relative;
     display: flex;
     width: 100vw;
     height: 100vh;
     line-height: 4rem;
     padding: 10rem;
+    border: solid 3px var(--color-txtSnd);
     h1 {
         
         font-size: 5rem;
@@ -172,6 +177,7 @@
     left: 5vw;
     display: block;
     width: 40%;
+    
 
     @media (max-width: 768px) {
       top: -30vh;
@@ -199,6 +205,7 @@
   .mid-section .mid-section-right .highlight {
     font-weight: 700;
     font-size: 6rem;
+    color: var(--color-txtSnd);
 
     @media (max-width: 768px) {
       font-size: 2rem;
@@ -211,6 +218,7 @@
     width: 100vw;
     height: 100vh;
     line-height: 4rem;
+    color: var(--color-txt);
     @media (max-width: 768px) {
       line-height: 2rem;
    }
@@ -249,6 +257,7 @@
         font-size: 5rem;
         font-weight: 100;
       }
+
       @media (max-width: 768px) {
         padding: 2rem;
         top: 50vh;
@@ -265,6 +274,7 @@
   .bottom-section .bottom-section-right .highlight {
     font-weight: 700;
     font-size: 5rem;
+    color: var(--color-txtSnd);
 
     @media (max-width: 768px) {
       font-size: 2rem;

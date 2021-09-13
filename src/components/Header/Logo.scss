@@ -1,18 +1,15 @@
 .logo {
     position: relative;
-    margin-left: 1rem;
     height: inherit;
-    font-size: 2.4rem;
+    font-size: 3rem;
     width: 100%;
     color: var(--color-halloffame);
     z-index: 20;
     background: transparent;
-    text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.4);
-    padding: 0.1rem 1rem;
-    border-radius: 2px;
+    padding: 0.25rem 4rem;
   }
   
-  .logo:after {
+  .logo:before {
     content: "Be Creative!";
     position: absolute;
     left: 50%;
@@ -23,7 +20,7 @@
     z-index: -10;
   }
   
-  .logo:hover:after {
+  .logo:hover:before {
     transform: translateX(1rem);
     transition: all 0.8s ease-in-out;
     width: 200%;

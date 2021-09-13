@@ -3,10 +3,10 @@ import styled, {keyframes} from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const breatheAnimation = keyframes`
-    0% { opacity: 1; background:  #FFBA37; box-shadow: 0px 0px 0px 1px white; }
+    0% { opacity: 1; background:  #484848; box-shadow: 0px 0px 0px 1px white; }
     30% { opacity: 0.3 transform: scale(0.96); box-shadow: 0px 0px 5px 1px white;}
     40% { opacity: 0.6; transform: scale(0.96); box-shadow: 0px 0px 5px 1px white;}
-    100% { opacity: 0.9; background:  #FFBA37; box-shadow: 0px 0px 0px 1px white;}
+    100% { opacity: 0.9; background:  #484848; box-shadow: 0px 0px 0px 1px white;}
 `
 
 const Wrapper = styled.div`
@@ -17,8 +17,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-color: #FFBA37;
-background: #5300C6;
+color: #fff;
+background: #282828;
 z-index: 100;
 
 &>h1 {

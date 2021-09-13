@@ -46,7 +46,7 @@ const HomeIntro = () => {
                             </h3>
                         </div>
                         <div className="bottom-section-right">
-                            <h2>As a developer I'm <i><b>focused</b></i> on finding the best solutions for you problems. <br/> And we will <br/><span className="highlight">work together</span> to do so</h2>
+                            <h2>As a developer I'm <span className="highlight">focused</span> on finding the best solutions for you problems. <br/> And we will <br/><span className="highlight">work together</span> to do so</h2>
                         </div>
                 </section>
             </div>
