@@ -3,118 +3,7 @@ import styled from 'styled-components'
 import colors from '../../video/paint.webm';
 import { useSpring, animated } from 'react-spring'
 import './Projects.scss'
-
-
-
-const Card = styled.div`
-
-display: flex;
-  height: 280px;
-  width: 200px;
-  background-color: ${({ theme }) => theme.primaryCards};
-  border-radius: 10px;
-  box-shadow: -1rem 0 3rem #000;
-/*   margin-left: -50px; */
-  transition: 0.4s ease-out;
-  position: relative;
-  left: 0px;
-  
-
-  &:hover {
-    transform: translateX(-2px);
-  transition: 0.4s ease-out;
-  
-  }
-
-  &:hover ~ & {
-    position: relative;
-    left: 2px;
-    transition: 0.4s ease-out;
-  }
-
-  @media (max-width:900px) {
-    height: 160px;
-    width: 100px;
-        
-    }
-  `;
-
-
-const Title = styled.div`
-color: ${({ theme }) => theme.fontColor};
-font-weight: 600;
-position: absolute;
-left: 20px;
-top: 15px;
-
-@media (max-width:1200px) {
-    left: 10px;
-    font-size: 0.8rem;
-    word-break: break-all;
-    }
-
-`;
-
-const Bar = styled.div`
-position: absolute;
-  top: 100px;
-  left: 20px;
-  height: 5px;
-  width: 150px;
-
-  @media (max-width:1200px) {
-    top: 70px;
-    left: 10px;
-    width: 90px;
-        
-    }
-
-  `;
-
-const EmptyBar = styled.div`
-  background-color: #2e3033;
-  width: 90%;
-  height: 100%;
-
-  `;
-
-const FilledBar = styled.div`
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(90deg, #9ccc9c 0%, #649568 65%,#149414 100%);
-  transition: 0.6s ease-out;
-
-  ${Card}:hover & {
-      max-width: 100%;
-    width: 120px;
-    transition: 0.4s ease-out;
-  }
- 
-  `;
-
-const Info = styled.div`
-color: ${({ theme }) => theme.fontColor};
-font-size: 13px;
-font-weight: 600;
-position: absolute;
-left: 12px;
-top: 155px;
-margin-right: 9px;
-
-@media (max-width:900px) {
-    left: 10px;
-    font-size: 0.4rem;
-    left: 1rem;
-    top: 5rem;
-    word-break: break-all;
-    
-    }
-
-
-`;
+import './ProjectCard.scss'
 
 
 const Projects = () => {
@@ -161,12 +50,13 @@ const Projects = () => {
                 {
                                     repos.map(({name, html_url, description, id}) => {
                                         return (
-                                            <Card key={id}>
-                                                <Title>{name}</Title><Bar><EmptyBar></EmptyBar><FilledBar></FilledBar></Bar><Info>{description}</Info>
+                                            <div className="card" key={id}>
+                                            <div className="card-title">{name}</div><div className="card-bar"><div className="emptyBar"></div><div className="filledBar"></div></div>
+                                            <div className="card-info">{description}</div>
                                                 
                                                     <button onClick={()=> window.open(html_url, "_blank")} className="repoBtn">Check</button>
                                                 
-                                            </Card>
+                                            </div>
 
                                         )
 

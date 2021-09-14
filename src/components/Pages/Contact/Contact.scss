@@ -15,6 +15,10 @@ border-radius: 10px;
 box-shadow: 1px 1px 3px rgb(0, 0, 0, 0.4), -1px -1px 3px rgba(0,0,0,0.4);
 z-index: 2;
 
+@media (max-width: 768px) {
+  height: 60vh;
+   }
+
 h1 {
    position: relative;
    letter-spacing: 3px;
@@ -22,6 +26,11 @@ h1 {
    text-shadow: 3px 3px 2px rgba(0,0,0,0.6);
    margin-bottom: 1em;
    font-size: 5rem;
+   color: var(--color-txt);
+
+   @media (max-width: 768px) {
+   font-size: 3rem;
+    }
 }
 div {
    display: flex;
@@ -36,6 +45,11 @@ h3 {
    margin-bottom: 1em;
    font-size: 3rem;
    font-weight: 200;
+   color: var(--color-txt);
+
+   @media (max-width: 768px) {
+    font-size: 1.4rem;
+     }
 }
 
 div {
@@ -88,7 +102,13 @@ div {
     width: 100vw;
     z-index: 99;
     height: 50px;
-    transition: all .3s ease-in-out 0s
+    transition: all .3s ease-in-out 0s;
+
+    @media (max-width: 768px) {
+      left: 50%;
+      top: 60%;
+      transform: translate(-50%);
+       }
   }
   
   .contact .social .soc-item {
@@ -102,6 +122,11 @@ div {
     height: 72px;
     text-align: center;
     transition: all .3s ease-in-out;
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+       }
   
   }
   
