@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DropMenu } from '../content/index'
+import { DropMenu } from '../Content/index'
 import { Link } from 'react-router-dom'
 import './Dropdown.scss'
 

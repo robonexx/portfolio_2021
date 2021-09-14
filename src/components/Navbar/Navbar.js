@@ -13,24 +13,14 @@ import { Close } from '@styled-icons/evil/Close'
 
 const MenuBtn = styled(Menu)`
     color: #f4f4f8;
-    width: 46px;
-    height: 46px;
-
-    @media (max-width: 768px) {
-        width: 32px;
-        height: 32px;
-      }
+    width: 32px;
+    height: 32px;
   `;
   
 const CloseBtn = styled(Close)`
     color: #f4f4f8;
-    width: 46px;
-    height: 46px;
-
-    @media (max-width: 768px) {
-        width: 32px;
-        height: 32px;
-      }
+    width:32;
+    height: 32px;
 `;
 
 

@@ -6,7 +6,11 @@
     font-family: var(--font);
     overflow-x: hidden;
     cursor: none;
+    
   }
+ /*  .child {
+    scroll-snap-align: center;
+  } */
 
 
 .overlayImg {
@@ -21,10 +25,28 @@
     background-size: contain;
     opacity: 0.4;
     z-index: -1;
+    animation: homeImg 5s 1 ease-in;
+    transition: all 0.8s ease;
+    
+    @media (max-width: 768px) {
+      top: 10vh;
+      bottom: 0;
+    }
+  }
+
+  @keyframes homeImg {
+    from {
+      opacity: 1;
+      transform: translateX(-50vw);
+    }
+    to {
+      opacity: 0.4;
+      transform: translateX(0);
+    }
   }
 
   .overlay {
-      background-color: rgba(0, 0, 0, 0.034);
+      background-color: rgba(0, 0, 0, 0.024);
       position: absolute;
       width: 100vw;
       height: 100vh;
@@ -61,22 +83,20 @@
         margin-left: 25rem;
       }
       h5 {
-        font-weight: 300;
+        font-weight: 200;
       }
 
       @media (max-width: 768px) {
-        
         position: absolute;
         z-index: 2;
-        top: 8vh;
-        min-width: 400px;
-        max-width: 700px;
+        width: 100vw;
         height: 92vh;
-        top: 20%;
+        top: 50%;
         left: 50%;
         transform: translateX(-50%);
           
         h1 {
+          padding-left: 1rem;
           font-size: 7rem;
           line-height: 3.5rem;
         }
@@ -88,17 +108,21 @@
           margin-bottom: 2rem;
         }
         h5 {
+          padding: 0;
+          margin: 0;
+          width: 100vw;
           text-align: center;
+          padding: 0;
+          text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
         }
       }
   }
 /* ================================================================ */
   .mid-section-top {
-    position: relative;
-    margin: 100vh 0 0;
+      position: relative;
+      margin: 100vh 0 0;
       width: 100vw;
-      height: 100vh;
-      background-color: var(--color-bg);
+      height: 90vh;
       color: var(--color-txt);
      
     h2 {
@@ -125,9 +149,10 @@
       }
 
       @media (max-width: 768px) {
-        height: relative;
-        padding: 4rem;
+        padding: 0 4.5rem 0 4.5rem;
         margin: 100vh 0 0;
+        background-color: var(--color-bg);
+        z-index: 2;
 
         h2 {
           position: relative;
@@ -136,7 +161,6 @@
           line-height: 3rem;
           font-weight: 200;
           width: 100%;
-          margin-bottom: 10rem;
         }
         h2 > span {
           position: relative;
@@ -151,7 +175,6 @@
   }
   /* =========================================================== */
   .mid-section {
-    background: var(-color-bg);
     color: var(--color-txt);
     font-family: var(--font);
     position: relative;
@@ -166,13 +189,13 @@
     }
 
     @media (max-width: 768px) {
-
       position: relative;
-      padding: 1rem;
-      margin: 0;
-      h1 {
-        font-size: 2rem;
-        line-height: 2rem;
+      height: 50vh;
+      padding: 0 4rem 0;
+      margin: 0 0 5rem 0;
+      h2 {
+        font-size: 4rem;
+        line-height: 2.4rem;
       }
     }
   }
@@ -183,7 +206,8 @@
     color: var(--color-txtSnd);
 
     @media (max-width: 768px) {
-      font-size: 3rem;
+      font-size: 4rem;
+      line-height: 3rem;
    }
   }
 
@@ -197,9 +221,9 @@
 
     @media (max-width: 768px) {
       width: 100%;
-      height: 100%;
+      height: 50vh;
       line-height: 2rem;
-      padding: 2rem;
+      padding: 4rem;
    }
   }
 
@@ -215,8 +239,7 @@
         font-weight: 100;
       }
       @media (max-width: 768px) {
-        left: 3rem;
-       width: 100%;
+       width: 50%;
 
        h3 {
          font-size: 2rem;
@@ -239,12 +262,13 @@
 
       @media (max-width: 768px) {
         padding: 2rem;
-        top: 50vh;
+        top: 35vh;
+        bottom: 5vh;
         right: 0rem;
-        width: 100%;
+        width: 70%;
 
         h2 {
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
      }
   }

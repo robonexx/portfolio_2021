@@ -17,19 +17,8 @@ return (
     transition={{ duration: 0.3 }}
     className="home">
         <video autoPlay loop muted
-                    style={{
-                        position: "absolute",
-                        margin: "0",
-                        bottom: "0",
-                        left: "0",
-                        width: "100vw",
-                        zIndex: "-1",
-                        objectFit: "cover",
-                        overflowX: "hidden"
-
-                    }}
-                >
-                    <source src="{LandingVideo}" type="video/webm" />
+                    className="home-video">
+                    <source src={LandingVideo} type="video/webm" />
         </video>
         <HomeIntro />            
             

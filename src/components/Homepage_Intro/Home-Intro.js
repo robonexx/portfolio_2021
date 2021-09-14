@@ -15,7 +15,7 @@ const HomeIntro = () => {
         <animated.div className="home-intro" style={fade}>
             <div className="overlay">
                 <div className="overlayImg"></div>
-                <section className="top-section">
+                <section className="top-section child">
                     <animated.div style={fadeInA}>
                         <h1>Hi</h1>
                         <h1>I'm </h1>
@@ -24,16 +24,16 @@ const HomeIntro = () => {
                         <h5>Developer & Dancer</h5>
                         <br/><br/>
                 </section>
-                <div className="mid-section-top">
+                <section className="mid-section-top child">
                 <h2><span>...</span> <br/>
                              If you are looking for a <b>developer</b> to bring your ideas to life or a experienced <b>danceteacher</b> thats been active for the past 25+ years you come to the right place</h2>    
-                </div>
+                </section>
                                         
                     
-                <div className="mid-section">
+                <section className="mid-section child">
                             <h2>I'm always looking for <span className="highlight">creative solutions</span> in everythings life. <br/> Without creativity we would be standing still</h2>                   
-                    </div>
-                    <div className="bottom-section">
+                    </section>
+                    <section className="bottom-section child">
                         <div className="bottom-section-left">
                             <h3>
                                 <i>My design</i> is equally about <br/>
@@ -45,7 +45,7 @@ const HomeIntro = () => {
                         <div className="bottom-section-right">
                             <h2>As a developer I'm <span className="highlight">focused</span> on finding the best solutions for you problems. <br/> And we will <br/><span className="highlight">work together</span> to do so</h2>
                         </div>
-                </div>
+                </section>
             </div>
     </animated.div>
      );
