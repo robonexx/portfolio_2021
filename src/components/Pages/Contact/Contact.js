@@ -22,12 +22,12 @@ const Contact = () => {
             >
                 <source src={typing} type="video/mp4"/>
             </video> 
-            <div className="social">
+           {/*  <div className="social">
                              <a href="https://github.com/robonexx" target="_blank"><Github className="soc-item soc-icon"/></a>
                            <a href="https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/" target="_blank"> <Linkedin className="soc-item soc-icon"/></a>
                            <a href="https://facebook.com/robert.r.wagar" target="_blank"> < Facebook className="soc-item soc-icon"/></a>
                             <a href="https://www.instagram.com/r.o.b_o.n.e/" target="_blank">< Instagram className="soc-item soc-icon"/></a>
-                        </div>
+                        </div> */}
             </div>
             </div>
         

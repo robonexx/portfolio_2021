@@ -9,7 +9,7 @@ const Projects = () => {
     const [repos, setRepos] = useState([])
 
     useEffect(async () => {
-        const res = await fetch('https://api.github.com/users/robonexx/repos')
+        const res = await fetch('https://api.github.com/users/robonexx/repos?per_page=5&sort=created:asc')
         const data = await res.json()
         console.log(data)
         setRepos(data)

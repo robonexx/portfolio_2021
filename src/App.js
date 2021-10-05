@@ -4,6 +4,7 @@ import Cursor from './components/Cursor/Cursor'
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion'
 import Header from './components/Header';
+import Footer from "./components/Footer/Footer";
 import Home from './components/Pages/Home/Home';
 import About from './components/Pages/About/About';
 import Projects from './components/Pages/Projects/Projects';
@@ -40,6 +41,7 @@ const App = ({ cursor }) => {
         </AnimatePresence>
       </div>     
       </div>
+      <Footer />
       </div>
   );
 };
