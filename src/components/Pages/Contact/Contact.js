@@ -1,6 +1,4 @@
-import styled from 'styled-components'
 import './Contact.scss'
-/* import { useSpring, animated } from 'react-spring' */
 import typing from '../../../components/video/typing.mp4';
 import { Github } from '@styled-icons/feather/Github'
 import { Linkedin } from '@styled-icons/feather/Linkedin'

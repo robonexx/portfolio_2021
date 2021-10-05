@@ -60,21 +60,22 @@ const Navbar = () => {
                             <small>where we live...</small>
                         </Link>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item"
+                    onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                    >
                         <Link to="/about" className="nav-links"
                             onClick={() => setIsOpen(false)}>
                             About
                             <small>Me, MySelf and I</small>
+                            {dropdown && <Dropdown/>}
                         </Link>
                     </li>
-                    <li className="nav-item"
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}>
+                    <li className="nav-item">
                         <Link to="/projects" className="nav-links"
                             onClick={() => setIsOpen(false)}>
                             Projects
                             <small>What I've been up to</small>
-                            {dropdown && <Dropdown/>}
                         </Link>
                     </li>
                     <li className="nav-item">

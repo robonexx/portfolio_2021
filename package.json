@@ -1,5 +1,5 @@
 {
-  "name": "rupertofolio",
+  "name": "robertwagar2021",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
+    "framer-motion": "^4.1.17",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -16,8 +17,6 @@
     "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
-    "react-spring": "^8.0.27",
-    "framer-motion": "^4.1.17",
     "sass": "^1.32.12",
     "styled-components": "^5.2.1",
     "styled-icons": "^10.27.0",
@@ -29,7 +28,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && cd build && cp index.html 200.html && surge ./"
-
   },
   "eslintConfig": {
     "extends": [

@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.scss'
-/* import styled from 'styled-components'
-import Navbar from '../Nav/Navbar' */
+/*import Navbar from '../Nav/Navbar' */
 import Nav2 from '../Navbar/Navbar.js'
 /* import MenuBtn from '../Nav/MenuBtn' */
 import { useMediaQuery } from 'react-responsive'

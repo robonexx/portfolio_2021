@@ -3,7 +3,6 @@ import './App.scss'
 import Cursor from './components/Cursor/Cursor'
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion'
-import { useSpring, animated } from 'react-spring'
 import Header from './components/Header';
 import Home from './components/Pages/Home/Home';
 import About from './components/Pages/About/About';
@@ -15,9 +14,6 @@ import Error from './components/Pages/Error'
 
 const App = ({ cursor }) => {
   
-  
-  const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
-  
   const location = useLocation()
 
   return (
@@ -27,7 +23,7 @@ const App = ({ cursor }) => {
   cursor.style.left = `${e.pageX}px`
   cursor.style.top = `${e.pageY}px`
   }}/>
-    <animated.div className="App" style={fade}>
+    <div className="App">
     <Header />
       <div>
         <AnimatePresence exitBeforeEnter
@@ -43,7 +39,7 @@ const App = ({ cursor }) => {
           </Switch>
         </AnimatePresence>
       </div>     
-      </animated.div>
+      </div>
       </div>
   );
 };

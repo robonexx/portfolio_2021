@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: vh;
+    height: 8vh;
     background: var(--color-bg);
     z-index: 10;
     color: #f4f4f4;
@@ -18,9 +18,7 @@
 .navbar ul {
     /* display the unordered list in a single row, placing the elements at the end of the grid column */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
+    width: 30%;
     list-style: none;
   }
   
@@ -30,22 +28,8 @@
         text-transform: uppercase;
         display: grid;
         grid-template-columns: 1fr auto;
-        align-items: center;
-        grid-gap: 1.6rem;
+        grid-gap: 1rem;
         padding: 0.5rem;
-    
-
-    &::after {
-        border-right: solid 15px transparent;
-         border-left: solid  15px #fafafa;
-        border-top: solid transparent 15px;
-        border-bottom: solid transparent 15px;
-        transform: translateX(-70%) translateY(-10%);
-        position: absolute;
-        z-index: -1;
-        content: "";
-        display: block;
-  }
   
   &:hover,
   &:focus {
@@ -56,12 +40,6 @@ color: #FA9F8D;
   small {
       color: var(--color-home);
   }
-   &::after {
-    border-right: solid 15px transparent;
-    border-left: solid  15px var(--color-history);
-   border-top: solid  15px transparent;
-   border-bottom: solid transparent 15px;
-  }  
    
 } 
   }
@@ -128,9 +106,9 @@ color: #FA9F8D;
   
   .navbar ul li a:hover:before {
     /* hover, ändrar så strecket går från mitten till höger och vänster */
-    bottom: -1px;
-    left: -6px;
-    right: -6px;
+    bottom: -2px;
+    left: 4px;
+    right: 4px;
   }
 
   .nav-links-mobile {

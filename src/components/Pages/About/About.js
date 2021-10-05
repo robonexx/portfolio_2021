@@ -2,15 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './About.scss'
-import Modal from '../../Modal/Modal';
 
 const About = () => {
 
-    const [showModal, setShowModal ] = useState(false)
-
-    const openModal = () => {
-        setShowModal(prev => !prev)
-    }
 
 return ( 
     <motion.div 
@@ -20,7 +14,6 @@ return (
        transition={{ duration: 0.2, delayChildren: 0.2 }}
         className="about">
         
-        {showModal && <Modal className="modal" showModal={showModal} setShowModal={setShowModal} />}
         <motion.div className="about-wrapper-top"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1}}
@@ -55,20 +48,3 @@ return (
  
 export default About;
 
-
-{/* <DevSection>
-                    <animated.div style={fadeInA}>
-                        <Button onClick={openModal} >
-                    <Developer>Developer</Developer>
-                    </Button>
-                </animated.div>
-            </DevSection> */}
-                
-            {/* <DancerSection>  
-                <animated.div style={fadeInA}>
-                    <Button>
-                <Dancer>Dancer</Dancer>
-                </Button>
-                </animated.div>
-                </DancerSection> */}
-                

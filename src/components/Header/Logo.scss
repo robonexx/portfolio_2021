@@ -2,7 +2,7 @@
     position: relative;
     height: inherit;
     font-size: 3rem;
-    width: 100%;
+    width: 50%;
     color: var(--color-halloffame);
     z-index: 20;
     background: transparent;
@@ -16,7 +16,8 @@
   .logo:before {
     content: "Be Creative!";
     position: absolute;
-    left: 40%;
+    width: fit-content;
+    left: 20rem;
     transform: translateY(-100%);
     color: var(--color-txt);
     background: transparent;

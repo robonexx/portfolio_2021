@@ -1,26 +1,21 @@
 import React from 'react'
 import './HomeIntro.scss'
-import { useSpring, animated } from 'react-spring'
 
 
 
 
 const HomeIntro = () => {
 
-    const fade = useSpring({from: {opacity: 0}, opacity: 1}); 
-    const fadeIn = useSpring({from: {transform: 'translateX(900px)', opacity: 0}, transform: 'translateX(0px)' , opacity: 1});
-    const fadeInA = useSpring({from: {transform: 'translateY(1500px)', opacity: 0}, transform: 'translateY(0px)' , opacity: 1});
-
     return (
-        <animated.div className="home-intro" style={fade}>
+        <div className="home-intro">
             <div className="overlay">
                 <div className="overlayImg"></div>
                 <section className="top-section child">
-                    <animated.div style={fadeInA}>
+                    <div>
                         <h1>Hi</h1>
                         <h1>I'm </h1>
                         <h1>Robert</h1>
-                        </animated.div>
+                        </div>
                         <h5>Developer & Dancer</h5>
                         <br/><br/>
                 </section>
@@ -47,7 +42,7 @@ const HomeIntro = () => {
                         </div>
                 </section>
             </div>
-    </animated.div>
+    </div>
      );
 }
  

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
 import colors from '../../video/paint.webm';
-import { useSpring, animated } from 'react-spring'
 import './Projects.scss'
 import './ProjectCard.scss'
 
@@ -17,14 +15,9 @@ const Projects = () => {
         setRepos(data)
     }, [])
 
-
-    const fade = useSpring({from: {opacity: 0}, opacity: 1}); 
-    const fadeIn = useSpring({from: {transform: 'translateY(-300px)', opacity: 0}, transform: 'translateY(0px)', opacity: 1});
-
-    
     
     return ( 
-        <animated.div style={fade} className="projects">
+        <div className="projects">
 
             <video autoPlay loop muted
             style={{
@@ -41,12 +34,12 @@ const Projects = () => {
                 <source src={colors} type="video/mp4"/>
             </video> 
            <div className="wrapper">
-                <animated.div  style={fadeIn}>
+                <div>
                 <h1>Some of the projects I've worked on</h1>
-                </animated.div>
-                <animated.div>
+                </div>
+                <div>
                     <div className="container">
-                        <div className="repos" style={fade}>
+                        <div className="repos">
                 {
                                     repos.map(({name, html_url, description, id}) => {
                                         return (
@@ -64,10 +57,10 @@ const Projects = () => {
                                 }
                     </div>
                 </div>
-                </animated.div>
+                </div>
                 
             </div>
-            </animated.div>
+            </div>
         
         
      );
