@@ -1,4 +1,4 @@
-# So started on a New portfolio
+# So started on a New portfolio (deleted it and now back to it... )
 
 My goal is to try to use a lot of what i have learned the past year
 
