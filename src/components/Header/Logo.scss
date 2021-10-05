@@ -1,7 +1,7 @@
 .logo {
     position: relative;
     height: inherit;
-    font-size: 3rem;
+    font-size: 4rem;
     width: 50%;
     color: var(--color-halloffame);
     z-index: 20;
@@ -9,6 +9,8 @@
     padding: 0.25rem 2rem;
 
     @media(max-width: 960px) {
+      font-size: 3rem;
+      width: 80%;
      padding: 0.25rem 1rem;    
     }
   }
@@ -17,7 +19,7 @@
     content: "Be Creative!";
     position: absolute;
     width: fit-content;
-    left: 20rem;
+    left: 22rem;
     transform: translateY(-100%);
     color: var(--color-txt);
     background: transparent;

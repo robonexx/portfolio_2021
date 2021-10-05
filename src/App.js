@@ -18,11 +18,11 @@ const App = ({ cursor }) => {
 
   return (
     <div>
-      <Cursor cursor={cursor} onMouseMove = { (e) => {
+     {/*  <Cursor cursor={cursor} onMouseMove = { (e) => {
   const cursor = document.querySelector(".cursor")
   cursor.style.left = `${e.pageX}px`
   cursor.style.top = `${e.pageY}px`
-  }}/>
+  }}/> */}
     <div className="App">
     <Header />
       <div>
